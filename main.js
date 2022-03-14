@@ -69,10 +69,10 @@ const posts = [
     {
         "id": 6,
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-        "media": "https://unsplash.it/600/400?image=534",
+        "media": "https://unsplash.it/600/400?image=580",
         "author": {
             "name": "Tom Brady",
-            "image": "https://unsplash.it/300/300?image=29"
+            "image": null
         },
         "likes": 1000,
         "created": "2021-02-10"
@@ -80,10 +80,10 @@ const posts = [
     {
         "id": 7,
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-        "media": "https://unsplash.it/600/400?image=534",
+        "media": "https://unsplash.it/600/400?image=590",
         "author": {
             "name": "Payton Manning",
-            "image": "https://unsplash.it/300/300?image=29"
+            "image": "https://unsplash.it/300/300?image=50"
         },
         "likes": 89,
         "created": "2021-04-10"
@@ -91,10 +91,10 @@ const posts = [
     {
         "id": 8,
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-        "media": "https://unsplash.it/600/400?image=534",
+        "media": "https://unsplash.it/600/400?image=580",
         "author": {
             "name": "Elia Manning",
-            "image": "https://unsplash.it/300/300?image=29"
+            "image": "https://unsplash.it/300/300?image=91"
         },
         "likes": 95,
         "created": "2021-01-16"
@@ -102,10 +102,10 @@ const posts = [
     {
         "id": 9,
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-        "media": "https://unsplash.it/600/400?image=534",
+        "media": "https://unsplash.it/600/400?image=978",
         "author": {
             "name": "Aaron Rodgers",
-            "image": "https://unsplash.it/300/300?image=29"
+            "image": "https://unsplash.it/300/300?image=87"
         },
         "likes": 800,
         "created": "2021-04-05"
@@ -113,10 +113,10 @@ const posts = [
     {
         "id": 10,
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-        "media": "https://unsplash.it/600/400?image=534",
+        "media": "https://unsplash.it/600/400?image=832",
         "author": {
             "name": "Russel Wilson",
-            "image": "https://unsplash.it/300/300?image=29"
+            "image": "https://unsplash.it/300/300?image=65"
         },
         "likes": 90,
         "created": "2021-05-05"
@@ -124,10 +124,10 @@ const posts = [
     {
         "id": 11,
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-        "media": "https://unsplash.it/600/400?image=534",
+        "media": "https://unsplash.it/600/400?image=999",
         "author": {
             "name": "Dirk Cusins",
-            "image": "https://unsplash.it/300/300?image=29"
+            "image": "https://unsplash.it/300/300?image=22"
         },
         "likes": 45,
         "created": "2021-06-05"
@@ -135,10 +135,10 @@ const posts = [
     {
         "id": 12,
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-        "media": "https://unsplash.it/600/400?image=534",
+        "media": "https://unsplash.it/600/400?image=654",
         "author": {
             "name": "Trevor Lawrance",
-            "image": "https://unsplash.it/300/300?image=29"
+            "image": "https://unsplash.it/300/300?image=21"
         },
         "likes": 43,
         "created": "2021-08-05"
@@ -146,10 +146,10 @@ const posts = [
     {
         "id": 13,
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-        "media": "https://unsplash.it/600/400?image=534",
+        "media": "https://unsplash.it/600/400?image=789",
         "author": {
             "name": "Zach Wilson",
-            "image": "https://unsplash.it/300/300?image=29"
+            "image": null
         },
         "likes": 90,
         "created": "2021-08-12"
@@ -157,10 +157,10 @@ const posts = [
     {
         "id": 14,
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-        "media": "https://unsplash.it/600/400?image=534",
+        "media": "https://unsplash.it/600/400?image=987",
         "author": {
             "name": "Mac Jones",
-            "image": "https://unsplash.it/300/300?image=29"
+            "image": "https://unsplash.it/300/300?image=99"
         },
         "likes": 43,
         "created": "2021-09-05"
@@ -168,12 +168,64 @@ const posts = [
     {
         "id": 15,
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-        "media": "https://unsplash.it/600/400?image=534",
+        "media": "https://unsplash.it/600/400?image=326",
         "author": {
             "name": "Matthew Stafford",
-            "image": "https://unsplash.it/300/300?image=29"
+            "image": "https://unsplash.it/300/300?image=43"
         },
         "likes": 700,
         "created": "2021-02-18"
     }
 ];
+
+const domContainer = document.getElementById("container");
+
+
+posts.forEach(element => {
+
+    let picProfile;
+
+    if(element.author.image == null){
+
+
+    }
+    else{
+        picProfile = `<img class="profile-pic" src="${element.author.image}" alt="${element.author.name}>  `;
+    }
+
+    const newPost = document.createElement("div");
+    newPost.classList.add("post");
+    newPost.innerHTML = `
+    <div class="post__header">
+    <div class="post-meta">                    
+        <div class="post-meta__icon">
+            ${picProfile};                   
+        </div>
+        <div class="post-meta__data">
+            <div class="post-meta__author">${element.author.name}</div>
+            <div class="post-meta__time">4 mesi fa</div>
+        </div>                    
+    </div>
+    </div>
+    <div class="post__text">Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.</div>
+    <div class="post__image">
+        <img src="${element.media}" alt="">
+    </div>
+    <div class="post__footer">
+        <div class="likes js-likes">
+            <div class="likes__cta">
+                <a class="like-button  js-like-button" href="#" data-postid="1">
+                    <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
+                    <span class="like-button__label">Mi Piace</span>
+                </a>
+            </div>
+            <div class="likes__counter">
+                Piace a <b id="like-counter-1" class="js-likes-counter">80</b> persone
+            </div>
+        </div> 
+    </div>            
+    `
+    
+    domContainer.appendChild(newPost);
+});
+
