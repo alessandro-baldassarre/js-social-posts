@@ -86,7 +86,7 @@ const posts = [
             "image": "https://unsplash.it/300/300?image=50"
         },
         "likes": 89,
-        "created": "2021-04-10"
+        "created": "2020-04-10"
     },
     {
         "id": 8,
@@ -97,7 +97,7 @@ const posts = [
             "image": "https://unsplash.it/300/300?image=91"
         },
         "likes": 95,
-        "created": "2021-01-16"
+        "created": "2019-04-16"
     },
     {
         "id": 9,
@@ -108,7 +108,7 @@ const posts = [
             "image": "https://unsplash.it/300/300?image=87"
         },
         "likes": 800,
-        "created": "2021-04-05"
+        "created": "2018-04-05"
     },
     {
         "id": 10,
@@ -119,7 +119,7 @@ const posts = [
             "image": null
         },
         "likes": 90,
-        "created": "2021-05-05"
+        "created": "2019-05-05"
     },
     {
         "id": 11,
@@ -130,7 +130,7 @@ const posts = [
             "image": "https://unsplash.it/300/300?image=22"
         },
         "likes": 45,
-        "created": "2021-06-05"
+        "created": "2017-06-05"
     },
     {
         "id": 12,
@@ -141,7 +141,7 @@ const posts = [
             "image": "https://unsplash.it/300/300?image=21"
         },
         "likes": 43,
-        "created": "2021-08-05"
+        "created": "2016-08-05"
     },
     {
         "id": 13,
@@ -152,7 +152,7 @@ const posts = [
             "image": null
         },
         "likes": 90,
-        "created": "2021-08-12"
+        "created": "2020-08-12"
     },
     {
         "id": 14,
@@ -163,7 +163,7 @@ const posts = [
             "image": "https://unsplash.it/300/300?image=99"
         },
         "likes": 43,
-        "created": "2021-09-05"
+        "created": "2016-09-05"
     },
     {
         "id": 15,
@@ -174,7 +174,7 @@ const posts = [
             "image": null
         },
         "likes": 700,
-        "created": "2021-02-18"
+        "created": "2021-08-1"
     }
 ];
 
@@ -184,6 +184,44 @@ const domContainer = document.getElementById("container");
 posts.forEach(element => {
 
     let picProfile;
+
+     const todayMonth = new Date().getMonth();
+     const todayYear = new Date().getFullYear();
+
+     let postMonth = parseInt(element.created.split("").slice(5,7).join(""));
+     let postYear = parseInt(element.created.split("").slice(0,4).join(""));
+
+     postMonth = postMonth - todayMonth;
+     postYear = todayYear - postYear;
+
+     let postDate = "";
+     
+     if ( postYear > 1 && postMonth > 1){
+        postDate = `${postYear} anni e ${postMonth} mesi fa`
+     }
+     else if( postYear == 1 && postMonth == 1){
+        postDate = `${postYear} anno e ${postMonth} mese fa`
+     }
+     else if( postYear < 1 && postMonth == 1){
+        postDate = `${postMonth} mese fa`
+     }
+     else if( postYear < 1 && postMonth > 1){
+        postDate = `${postMonth} mesi fa`
+     }
+
+     else if( postYear > 1 && postMonth <= 0){
+        postDate = `${postYear} anni fa`
+     }
+
+     else if( postYear == 1 && postMonth <= 0){
+        postDate = `${postYear} anno fa`
+     }
+     else if (postYear == 1 && postMonth > 1){
+        postDate = `${postYear} anno e ${postMonth} mesi fa`
+     }
+     
+     
+     ;
 
     if(element.author.image == null){
 
@@ -199,7 +237,7 @@ posts.forEach(element => {
 
 
 
-        picProfile = `<div class="profile-pic-default ">
+        picProfile = `<div class="profile-pic-default">
                         <span>${initials}</span></div>`;
 
     }
@@ -217,7 +255,7 @@ posts.forEach(element => {
         </div>
         <div class="post-meta__data">
             <div class="post-meta__author">${element.author.name}</div>
-            <div class="post-meta__time">4 mesi fa</div>
+            <div class="post-meta__time">${postDate}</div>
         </div>                    
     </div>
     </div>
