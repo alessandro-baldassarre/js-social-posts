@@ -235,12 +235,30 @@ posts.forEach(element => {
 
 const likesButtons = document.querySelectorAll(".js-like-button");
 const likesCounter = document.querySelectorAll(".js-likes-counter");
+const likesId = [];
 
 likesButtons.forEach((element, key) => {
 
     element.addEventListener("click", function(){
         this.style.color = "blue";
         likesCounter[key].innerHTML = (parseInt((likesCounter[key].innerHTML))+1);
-
+        likesId.push(key + 1);
+        console.table(likesId);
     });
 });
+
+function italianDate(americanDate) {
+    const year = americanDate.split("").slice(0,4).join("");
+    const month= americanDate.split("").slice(5,7).join("");
+    const day= americanDate.split("").slice(8,10).join("");
+    const newDate = day + "/" + month + "/" + year;
+    return newDate;
+  }
+
+
+  const italianPosts = posts.map(element =>{
+      element.created = italianDate(element.created);
+      return element;
+  })
+
+  console.table(italianPosts);
