@@ -183,7 +183,7 @@ const domContainer = document.getElementById("container");
 
 posts.forEach(element => {
 
-    let picProfile;
+    let picProfile = "";
 
      const todayMonth = new Date().getMonth();
      const todayYear = new Date().getFullYear();
@@ -242,22 +242,22 @@ posts.forEach(element => {
 
     }
     else{
-        picProfile = `<img class="profile-pic" src="${element.author.image}" alt="${element.author.name}>  `;
+        picProfile = `<img class="profile-pic" src="${element.author.image}" alt="${element.author.name}">`;
     }
 
     const newPost = document.createElement("div");
     newPost.classList.add("post");
     newPost.innerHTML = `
     <div class="post__header">
-    <div class="post-meta">                    
-        <div class="post-meta__icon">
-            ${picProfile}                  
+        <div class="post-meta">                    
+            <div class="post-meta__icon">
+               ${picProfile}                
+            </div>
+            <div class="post-meta__data">
+                <div class="post-meta__author">${element.author.name}</div>
+                <div class="post-meta__time">${postDate}</div>
+            </div>                    
         </div>
-        <div class="post-meta__data">
-            <div class="post-meta__author">${element.author.name}</div>
-            <div class="post-meta__time">${postDate}</div>
-        </div>                    
-    </div>
     </div>
     <div class="post__text">Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.</div>
     <div class="post__image">
