@@ -116,7 +116,7 @@ const posts = [
         "media": "https://unsplash.it/600/400?image=832",
         "author": {
             "name": "Russel Wilson",
-            "image": "https://unsplash.it/300/300?image=65"
+            "image": null
         },
         "likes": 90,
         "created": "2021-05-05"
@@ -171,7 +171,7 @@ const posts = [
         "media": "https://unsplash.it/600/400?image=326",
         "author": {
             "name": "Matthew Stafford",
-            "image": "https://unsplash.it/300/300?image=43"
+            "image": null
         },
         "likes": 700,
         "created": "2021-02-18"
@@ -187,6 +187,20 @@ posts.forEach(element => {
 
     if(element.author.image == null){
 
+        let initials = "";
+
+        for (let i = 0; i < element.author.name.length; i++){
+            if(isUpperCase(element.author.name.charAt(i))){
+
+                initials += element.author.name.charAt(i);
+            }
+
+        }
+
+
+
+        picProfile = `<div class="profile-pic-default ">
+                        <span>${initials}</span></div>`;
 
     }
     else{
@@ -199,7 +213,7 @@ posts.forEach(element => {
     <div class="post__header">
     <div class="post-meta">                    
         <div class="post-meta__icon">
-            ${picProfile};                   
+            ${picProfile}                  
         </div>
         <div class="post-meta__data">
             <div class="post-meta__author">${element.author.name}</div>
@@ -239,6 +253,8 @@ let likesId = [];
 
 likesButtons.forEach((element, key) => {
 
+    element.style.cursor = "pointer";
+
     element.addEventListener("click", function(){
 
         if(this.style.color == "blue"){
@@ -276,3 +292,19 @@ function italianDate(americanDate) {
   })
 
   console.table(italianPosts);
+
+
+  function isUpperCase(ch) {
+    if (!isNaN(ch * 1)){
+       return false;
+    }
+     else {
+       if (ch == ch.toUpperCase()) {
+          return true;
+       }
+       else{
+           return false;
+       }
+       
+    }
+ }
