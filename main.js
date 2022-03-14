@@ -235,15 +235,29 @@ posts.forEach(element => {
 
 const likesButtons = document.querySelectorAll(".js-like-button");
 const likesCounter = document.querySelectorAll(".js-likes-counter");
-const likesId = [];
+let likesId = [];
 
 likesButtons.forEach((element, key) => {
 
     element.addEventListener("click", function(){
-        this.style.color = "blue";
-        likesCounter[key].innerHTML = (parseInt((likesCounter[key].innerHTML))+1);
-        likesId.push(key + 1);
-        console.table(likesId);
+
+        if(this.style.color == "blue"){
+            this.style.color = "black";
+            likesCounter[key].innerHTML = (parseInt((likesCounter[key].innerHTML))-1);
+            likesId = likesId.filter(element => {
+                if(element != (key + 1)){
+                    return true;
+                }
+            })
+            console.table(likesId);
+        }
+        else{
+
+            this.style.color = "blue";
+            likesCounter[key].innerHTML = (parseInt((likesCounter[key].innerHTML))+1);
+            likesId.push(key + 1);
+            console.table(likesId);
+        }
     });
 });
 
